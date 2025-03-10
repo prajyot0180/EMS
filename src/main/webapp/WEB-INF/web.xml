@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>DemoProject</display-name>
+  
+
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <session-config>
+        <session-timeout>10</session-timeout>
+     </session-config> 
+  
+    <servlet>
+  	<servlet-name>loginform</servlet-name>
+  	<servlet-class>com.prajyot.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginform</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>adminform</servlet-name>
+  	<servlet-class>com.prajyot.servlets.AddAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>adminform</servlet-name>
+  	<url-pattern>/addAdmin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>employeeform</servlet-name>
+  	<servlet-class>com.prajyot.servlets.AddEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>employeeform</servlet-name>
+  	<url-pattern>/addEmployee</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>viewEmployee</servlet-name>
+  	<servlet-class>com.prajyot.servlets.ViewEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>viewEmployee</servlet-name>
+  	<url-pattern>/viewEmployee</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateEmployee</servlet-name>
+  	<servlet-class>com.prajyot.servlets.UpdateEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateEmployee</servlet-name>
+  	<url-pattern>/updateEmployee</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>deleteEmployee</servlet-name>
+  	<servlet-class>com.prajyot.servlets.DeleteEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteEmployee</servlet-name>
+  	<url-pattern>/deleteEmployee</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+  	<servlet-name>viewAdmin</servlet-name>
+  	<servlet-class>com.prajyot.servlets.ViewAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>viewAdmin</servlet-name>
+  	<url-pattern>/viewAdmin</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>logOut</servlet-name>
+  	<servlet-class>com.prajyot.servlets.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>logOut</servlet-name>
+  	<url-pattern>/logOut</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>employeeTask</servlet-name>
+  	<servlet-class>com.prajyot.servlets.EmployeeTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>employeeTask</servlet-name>
+  	<url-pattern>/employeeTask</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>deleteTask</servlet-name>
+  	<servlet-class>com.prajyot.servlets.DeleteEmployeeTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteTask</servlet-name>
+  	<url-pattern>/deleteTask</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  	<servlet-name>updateTask</servlet-name>
+  	<servlet-class>com.prajyot.servlets.UpdateEmployeeTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateTask</servlet-name>
+  	<url-pattern>/updateTask</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  	<servlet-name>forgotPassword</servlet-name>
+  	<servlet-class>com.prajyot.servlets.ForgotPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>forgotPassword</servlet-name>
+  	<url-pattern>/forgotPassword</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>downloadCSV</servlet-name>
+  	<servlet-class>com.prajyot.servlets.CsvDownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>downloadCSV</servlet-name>
+  	<url-pattern>/downloadCSV</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  	<servlet-name>downloadSkipedCSV</servlet-name>
+  	<servlet-class>com.prajyot.servlets.CsvSkipDownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>downloadSkipedCSV</servlet-name>
+  	<url-pattern>/downloadSkipedCSV</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  	<servlet-name>downloadEXL</servlet-name>
+  	<servlet-class>com.prajyot.servlets.ExlDownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>downloadEXL</servlet-name>
+  	<url-pattern>/downloadEXL</url-pattern>
+  </servlet-mapping>
+  
+        <servlet>
+  	<servlet-name>uploadFile</servlet-name>
+  	<servlet-class>com.prajyot.servlets.UploadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>uploadFile</servlet-name>
+  	<url-pattern>/uploadFile</url-pattern>
+  </servlet-mapping>
+  
+         <servlet>
+  	<servlet-name>viewUploadFile</servlet-name>
+  	<servlet-class>com.prajyot.servlets.ViewUploadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>viewUploadFile</servlet-name>
+  	<url-pattern>/viewUploadFile</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

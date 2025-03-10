@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Configuration status="debug">
+    <Properties>
+        <Property name="basePath">/home/credentek/Desktop/work/log/</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="console" target="SYSTEM_OUT">
+           <PatternLayout>
+                <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %C :%L - %msg%n</pattern>
+            </PatternLayout>
+        </Console>
+
+        <!-- Rolling File Appender -->
+        <RollingFile name="fileLogger"
+            fileName="${basePath}/EMS.log"
+            filePattern="${basePath}/EMS-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %C :%L - %msg%n</pattern>
+                  
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfLastModified age="30d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger with INFO level -->
+        <Root level="INFO" additivity="false">
+            <appender-ref ref="fileLogger" />
+            <appender-ref ref="console" />
+        </Root>
+
+    </Loggers>
+</Configuration>
